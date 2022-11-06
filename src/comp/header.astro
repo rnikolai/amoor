@@ -1,0 +1,45 @@
+---
+import "../style/header.css"
+---
+
+
+
+<header>
+
+    <nav>
+        <h1>AMOORDOD</h1>
+
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Discord</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <button class="hamburger">
+            <span class="material-icons"></span>
+        </button>
+    </nav>
+
+    <div class="mobile-menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Discord</a>
+        <a href="#">Contact</a>
+    </div>
+</header>
+
+
+
+<script is:inline>
+
+    const hamburger = document.querySelector('.hamburger');
+    const hamburger_icon = hamburger.querySelector('span');
+    const mobile_menu = document.querySelector('.mobile-menu');
+    
+    hamburger.addEventListener('click', () => {
+        hamburger_icon.innerText = hamburger_icon.innerText === 'menu' ? 'close': 'menu';
+        
+        mobile_menu.classList.toggle('is-open');
+    })
+    </script>
