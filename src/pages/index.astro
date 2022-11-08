@@ -1,19 +1,63 @@
 ---
-import Header from "../comp/header.astro"
-import '../style/main.css';
+import Main from '../layout/main.astro'
+import '../style/index.css'
+
+import house_done from '/IMG_3563.jpeg'
+import house_process from '/IMG_3554.jpeg'
 
 ---
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name ='description' content = 'Amoordod house construction, custom build luxury houses'>
-		<title>Document</title>
-	</head>
-	<body>
-		<body>
-			<Header />
-		</body>
-	</body>
-</html>
+
+<Main>
+	<section id="wrapper" class="skewed">
+		<div class="layer bottom">
+		  <div class="content-wrap">
+			<div class="content-body">
+			  <h1>Before</h1>
+			  <p>
+				<div>Description</div>
+			  </p>
+			</div>
+			<img src={house_done} alt="Before">
+		  </div>
+		</div>
+		<div class="layer top">
+		  <div class="content-wrap">
+			<div class="content-body">
+			  <h1>After</h1>
+			  <p>
+				<div>Description</div>
+			  </p>
+			</div>
+			<img src={house_process} alt="After">
+		  </div>
+		</div>
+		<div class="handle"></div>
+	  </section>
+	  
+	  <h1>hello world</h1>
+
+	  <script is:inline>
+		document.addEventListener('DOMContentLoaded', function() {
+			let wrapper = document.getElementById('wrapper'); 
+			let topLayer = wrapper.querySelector('.top');
+			let handle = wrapper.querySelector('.handle');
+			let skew = 0;
+			let delta = 0;
+			
+			if(wrapper.className.indexOf('skewed') != -1){
+			skew = 1000;
+			}
+			
+			wrapper.addEventListener('mousemove', function(e){
+			delta = (e.clientX - window.innerWidth / 2) * 0.5;
+			
+			handle.style.left = e.clientX + delta + 'px';  
+			
+			topLayer.style.width = e.clientX + skew + delta + 'px'; 
+			
+			});                         
+									
+									
+			});
+	  </script>
+</Main>

@@ -1,113 +1,218 @@
 * {
 	margin: 0;
 	padding: 0;
+	user-select: none;
 	box-sizing: border-box;
-	font-family: sans-serif;
 }
 
 body {
-	background-color: #eee;
+	background: #f2f2f2;
 }
 
 nav {
+	background: var(--dark);
+}
+
+nav:after {
+	content: '';
+	clear: both;
+	display: table;
+}
+
+
+
+nav .logo {
+	float: left;
+	color: var(--white);
+	font-size: 27px;
+	font-weight: 600;
+	line-height: 70px;
+	padding-left: 30px;
+}
+
+nav ul {
+	float: right;
+	margin-right: 40px;
+	list-style: none;
 	position: relative;
-	z-index: 99;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-color: #000;
-	color: #FFF;
-	padding: 1rem 1.5rem;
 }
 
-nav h1 {
-	letter-spacing: 5px;
-	padding: 0.5rem 1rem;
-	padding-right: calc(1rem - 5px);
-	border: 3px solid white;
-	/* border-radius: 8px; */
+nav ul li {
+	float: left;
+	display: inline-block;
+	background: var(--dark);
+	margin: 0 5px;
 }
 
-nav h1:hover {
-	color: crimson;
-}
-
-.menu {
-	display: none;
-	align-items: center;
-	margin: 0 -1rem;
-}
-
-.menu a {
-	margin: 0 1rem;
-	color: white;
+nav ul li a {
+	color: var(--white);
+	line-height: 70px;
 	text-decoration: none;
-	transition: 0.3s;
+	font-size: 18px;
+	padding: 8px 15px;
 }
 
-.menu a:hover {
-	color: crimson;
+nav ul li a:hover {
+	color: var(--grey);
+	border-radius: 5px;
+	box-shadow: 0 0 5px var(--accent),
+		0 0 10px var(--accent);
 }
 
-.hamburger {
-	appearance: none;
-	outline: none;
-	border: none;
-	background: none;
-	cursor: pointer;
-
-	display: block;
-	width: 2rem;
-	height: 2rem;
+nav ul ul li a:hover {
+	box-shadow: none;
 }
 
-.hamburger span {
-	color: #FFF;
-	font-size: 2rem;
-}
-
-.mobile-menu {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 98;
-
-	padding-top: 6rem;
+nav ul ul {
+	position: absolute;
+	top: 90px;
+	border-top: 3px solid var(--accent);
 	opacity: 0;
-	transform: translateY(-100%);
-	background-color: #000;
-	color: #FFF;
-	transition: 0.3s;
+	visibility: hidden;
+	transition: top .3s;
 }
 
-.mobile-menu.is-open {
+nav ul ul ul {
+	border-top: none;
+}
+
+nav ul li:hover>ul {
+	top: 70px;
 	opacity: 1;
-	transform: translateY(0);
+	visibility: visible;
 }
 
-.mobile-menu a {
-	display: block;
-	padding: 1rem;
-	color: #FFF;
-	text-align: center;
-	text-decoration: none;
-	font-size: 1.25rem;
-	transition: 0.3s;
+nav ul ul li {
+	position: relative;
+	margin: 0px;
+	width: clamp(150px, 200px, 600px);
+	float: none;
+	display: list-item;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.mobile-menu a:hover {
-	color: crimson;
-	background-color: #FFF;
+nav ul ul li a {
+	line-height: 50px;
 }
 
-@media (min-width: 768px) {
-	.mobile-menu, .hamburger {
+nav ul ul ul li {
+	position: relative;
+	top: -60px;
+	left: 150px;
+}
+
+.show,
+.icon,
+input {
+	display: none;
+}
+
+.fa-plus {
+	font-size: 15px;
+	margin-left: 40px;
+}
+
+@media all and (max-width: 968px) {
+	nav ul {
+		margin-right: 0px;
+		float: left;
+	}
+
+	nav .logo {
+		padding-left: 30px;
+		width: 100%;
+	}
+
+	.show+a,
+	ul {
 		display: none;
 	}
 
-	.menu {
-		display: flex;
+	nav ul li,
+	nav ul ul li {
+		display: block;
+		width: 100%;
 	}
+
+	nav ul li a:hover {
+		box-shadow: none;
+	}
+
+	.show {
+		display: block;
+		color: var(--white);
+		font-size: 18px;
+		padding: 0 20px;
+		line-height: 70px;
+		cursor: pointer;
+	}
+
+	.show:hover {
+		color: var(--accent);
+	}
+
+	.icon {
+		display: block;
+		color: var(--white);
+		position: absolute;
+		top: 0;
+		right: 40px;
+		line-height: 70px;
+		cursor: pointer;
+		font-size: 25px;
+	}
+
+	nav ul ul {
+		top: 70px;
+		border-top: 0px;
+		float: none;
+		position: static;
+		display: none;
+		opacity: 1;
+		visibility: visible;
+	}
+
+	nav ul ul a {
+		padding-left: 40px;
+	}
+
+	nav ul ul ul a {
+		padding-left: 80px;
+	}
+
+	nav ul ul ul li {
+		position: static;
+	}
+
+	[id^=btn]:checked+ul {
+		display: block;
+	}
+
+	nav ul ul li {
+		border-bottom: 0px;
+	}
+
+	span.cancel:before {
+		content: '\f00d';
+	}
+}
+
+.content {
+	z-index: -1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+header {
+	font-size: 35px;
+	font-weight: 600;
+	padding: 10px 0;
+}
+
+p {
+	font-size: 30px;
+	font-weight: 500;
 }

@@ -1,54 +1,57 @@
 ---
-import "../style/header.css"
+import "../style/header.css";
+import logo from '/logo/amoordod_logo_white.png'
 ---
 
-
-<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-    <!--     
-            <li><a href = '#'>Our Team</a></li>
-            <li><a href = '#'>Our Office</a></li>
-            <li><a href = '#'>Contact Us</a></li>
-             -->
-<header>
-
-    <nav>
-        <h1>AMOORDOD</h1>
-
-        <div class="menu">
-            <a href="#">Home</a>
-            <a href="#">About Us</a> 
-            <a href ="#">Lease and Rent</a>
-            <a href = '#'>Projects</a>
-            <a href = '#'>Luxury Houses</a>
-            <a href = '#'>Resedentional Masonary</a>
-            <a href="#">Contact</a>
-        </div>
-
-        <button class="hamburger">
-            <span class="material-icons">MENU</span>
-        </button>
-    </nav>
-
-    <div class="mobile-menu">
-        <a href="#">Home</a>
-        <a href="#">About Us</a> 
-        <a href ="#">Lease and Rent</a>
-        <a href ="#">Projects</a>
-        <a href ="#">Luxury Houses</a>
-        <a href ="#">Resedentional Masonary</a>
-        <a href="#">Contact</a>
-    </div>
-</header>
-
+<nav>
+  <div class="logo"><a href="/"><img class = 'logo' src="" alt="Amoordod"></a></div>
+  <label for="btn" class="icon">
+  <span class="fa fa-bars"></span>
+  </label>
+  <input type="checkbox" id="btn">
+  <ul>
+     <li><a href="#">Rent and Lease</a></li>
+     <li>
+        <label for="btn-1" class="show">About Us +</label>
+        <a href="/about">About Us</a>
+        <input type="checkbox" id="btn-1">
+        <ul>
+           <li><a href="#">Our Office</a></li>
+           <li><a href="#">Our Team</a></li>
+        </ul>
+     </li>
+     <li>
+      <label for="btn-2" class="show">Projects +</label>
+      <a href="#">Projects</a>
+      <input type="checkbox" id="btn-2">
+      <ul>
+         <li><a href="#">Ongoing Projects</a></li>
+         <li><a href="#">Luxury Houses</a></li>
+         <li><a href="#">Custom Houses</a></li>
+      </ul>
+   </li>
+     <!-- <li>
+        <label for="btn-2" class="show">Services +</label>
+        <a href="#">Services</a>
+        <input type="checkbox" id="btn-2">
+        <ul>
+           <li><a href="#">Web Design</a></li>
+           <li><a href="#">App Design</a></li>
+           <li>
+              <label for="btn-3" class="show">More +</label>
+              <a href="#">More <span class="fa fa-plus"></span></a>
+              <input type="checkbox" id="btn-3">
+              <ul>
+                 <li><a href="#">Submenu-1</a></li>
+                 <li><a href="#">Submenu-2</a></li>
+                 <li><a href="#">Submenu-3</a></li>
+              </ul>
+           </li>
+        </ul>
+     </li> -->
+     <li><a href="/contact">Contact Us</a></li>
+  </ul>
+</nav>
 <script is:inline>
 
-    const hamburger = document.querySelector('.hamburger');
-    const hamburger_icon = hamburger.querySelector('span');
-    const mobile_menu = document.querySelector('.mobile-menu');
-    
-    hamburger.addEventListener('click', () => {
-        hamburger_icon.innerText = hamburger_icon.innerText === 'menu' ? 'close': 'menu';
-        
-        mobile_menu.classList.toggle('is-open');
-    })
 </script>
