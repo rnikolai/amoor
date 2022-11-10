@@ -2,6 +2,7 @@
 import Main from '../layout/main.astro'
 import '../style/index.css'
 
+import hero from "/hero_page.jpg"
 import house_done from '/IMG_3563.jpeg'
 import house_process from '/IMG_3554.jpeg'
 
@@ -11,30 +12,20 @@ import house_process from '/IMG_3554.jpeg'
 	<section id="wrapper" class="skewed">
 		<div class="layer bottom">
 		  <div class="content-wrap">
-			<div class="content-body">
-			  <h1>Before</h1>
-			  <p>
-				<div>Description</div>
-			  </p>
-			</div>
 			<img src={house_done} alt="Before">
 		  </div>
 		</div>
 		<div class="layer top">
 		  <div class="content-wrap">
-			<div class="content-body">
-			  <h1>After</h1>
-			  <p>
-				<div>Description</div>
-			  </p>
-			</div>
 			<img src={house_process} alt="After">
 		  </div>
 		</div>
 		<div class="handle"></div>
 	  </section>
 	  
-	  <h1>hello world</h1>
+	<div class = 'parallax'></div>
+
+	<div style="min-height:100vw ;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa provident excepturi optio ea. Soluta velit cumque quae impedit vero consequuntur molestiae possimus assumenda aperiam! Ipsam amet nam quis suscipit quasi!</div>
 
 	  <script is:inline>
 		document.addEventListener('DOMContentLoaded', function() {

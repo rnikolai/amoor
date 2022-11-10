@@ -3,8 +3,8 @@ import "../style/header.css";
 import logo from '/logo/amoordod_logo_white.png'
 ---
 
-<nav>
-  <div class="logo"><a href="/"><img class = 'logo' src="" alt="Amoordod"></a></div>
+<nav id = 'nav' class =''>
+  <div class="logo"><a href="/"><img class = 'logo' src={logo} alt="Amoordod"></a></div>
   <label for="btn" class="icon">
   <span class="fa fa-bars"></span>
   </label>
@@ -53,5 +53,13 @@ import logo from '/logo/amoordod_logo_white.png'
   </ul>
 </nav>
 <script is:inline>
-
+   var navbar = document.getElementById('nav')
+   window.addEventListener("scroll", function(){
+   
+   if(window.scrollY==0){
+      navbar.classList.remove('scrolled') 
+   } else {
+      navbar.classList.add('scrolled')
+   }
+   });
 </script>
