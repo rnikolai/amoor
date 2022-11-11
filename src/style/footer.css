@@ -11,7 +11,7 @@
     position: relative;
     display: -ms-grid;
     display: grid;
-    max-width: 1200px;
+    max-width: 60%;
     margin-right: auto;
     margin-bottom: -50px;
     margin-left: auto;
