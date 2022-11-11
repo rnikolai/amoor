@@ -1,11 +1,11 @@
-.footer{
-    left: 0;
+  
+  #footer {
+    position: relative;
+    margin-top: 50px;
     bottom: 0;
     width: 100%;
-    background-color: var(--dark);
-    margin-top: 50px;
-    min-height: 10vw;
-}
+    background-color: #000;
+  }
 
 .contact-info-wrapper {
     position: relative;

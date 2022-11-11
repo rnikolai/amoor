@@ -78,12 +78,12 @@
 
 .app-left{
   filter:blur(1px);
-  transform: translateX(-100%);
+  transform: translateX(-25%);
 }
 
 .app-right{
   filter:blur(1px);
-  transform: translateX(100%);
+  transform: translateX(25%);
 }
 
 

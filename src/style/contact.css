@@ -28,9 +28,11 @@
     color: #ddd;
   }
   .border{
-    width: 100px;
-    height: 10px;
-    margin: 40px auto;
+    width: 100%;
+    text-align: center;
+    
+    margin: 0 auto;
+    margin-top: 25px;
   }
   
   .contact-form{
@@ -38,6 +40,9 @@
     margin: auto;
     padding: 0 10px;
     overflow: hidden;
+  }
+  .border h1{
+    color: #fff;
   }
   
   .contact-form-text{
