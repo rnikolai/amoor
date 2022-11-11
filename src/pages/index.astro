@@ -9,23 +9,16 @@ import house_process from "/IMG_3554.jpeg";
 
 <Main>
   <div id="bannercontainer">
-    <div class="top-banner-area anim-inview inview" style="background-image:url('/hero_page.jpg')" >
-      <div class="container-fluid">
-        <header class="entry-header">
-          <h5 class="top-title wow fadeInDownSm" style="visibility: visible; animation-name: fadeInDownSm;" > AMOORDOD Construction Company </h5>
+    <div class="top-banner-area shadow-text" style="background-image:url('/hero/wallpaperflare.com_wallpaper_3.jpg')" >
+      <div>
+        <header>
+          <h5> AMOORDOD Construction Company </h5>
 
-          <h1
-            class="entry-title main-title wow fadeIn"style="visibility: visible; animation-name: fadeIn;">
-            <span class="decor"
-              ><span class="letters">
-                Custom Home Building
-              </span>
-            </span>
-          </h1>
+          <h1><span>Custom Home Building</span></h1>
 
-          <div class="banner-desc wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+          <div>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br> Consequatur suscipit quasi, ad officiis laborum, incidunt atque et nulla .
+              One brick at a time. Anywhere,anytime.
             </p>
             <a href="/contact " class="">Contact Us</a>
           </div>
@@ -34,9 +27,45 @@ import house_process from "/IMG_3554.jpeg";
     </div>
   </div>
 
-  <h1 style="height:60vw">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.</h1>
+
+  <div class='section hidden'>
+    <h1 class ='hidden'  style="padding-top:5px;margin-top: 10px;height:60vw ;color:white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
+
+    </h1>
+
+  </div>
+  <div class = 'parallax' style="background-image: url('/Custom-Contractor-Toronto.jpg');"></div>
+
+  <div class='section hidden'>
+    <h1  style="height:60vw ;color:white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.</h1>
+  </div>
 
 
-  <div class = 'parallax'></div>
-  <h1 style="height:60vw">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.</h1>
+  <script defer is:inline>
+    const observer = new IntersectionObserver((entries) =>{
+      entries.forEach((entry)=>{
+        if (entry.isIntersecting){
+          entry.target.classList.add('loaded-el')
+        }
+      })
+    })
+    const hiddenEl =  document.querySelectorAll('.hidden')
+    hiddenEl.forEach((el) =>{observer.observe(el)})
+  </script>
+
 </Main>

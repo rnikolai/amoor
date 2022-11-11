@@ -10,30 +10,23 @@
     height: 100vh;
     min-height: 500px;
     padding: 150px 0;
-    background: url('/hero_page.jpg') no-repeat center center fixed;
     background-size: cover;
     text-align: center;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
-    -webkit-flex-direction: row;
     flex-direction: row;
-    -webkit-justify-content: center;
     justify-content: center;
-    -webkit-align-items: center;
     align-items: center;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: none;
     flex-wrap: nowrap;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translate3d(0,0,0);
+    box-shadow:inset 10px 70px 100px var(--dark);
+}
+
+.shadow-text{
+  text-shadow: 2px 2px var(--dark);
 }
 
 .parallax {
   /* The image used */
-  background-image: url("/Materials/1.jpg");
+  
 
   /* Set a specific height */
   min-height: 500px;
@@ -43,5 +36,20 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.section{
+  display: grid;
+  place-items: center;
+  align-items: center;
+  min-height: 100vh;
+
+}
+.hidden{
+  opacity: 0;
+  transition: all 2s ease;
+}
+.loaded-el{
+  opacity: 1;
 }
 
