@@ -117,6 +117,11 @@ nav ul ul ul li{
   nav ul{
     margin-right: 0px;
     float: left;
+    margin-top:50px ;
+  }
+  nav .logo{
+    float: none;
+    margin-top: 10px;
   }
   .show + a, ul{
     display: none;
@@ -169,7 +174,10 @@ nav ul ul ul li{
   }
   [id^=btn]:checked + ul{
     display: block;
+    background-color: var(--dark);
   }
+
+
   nav ul ul li{
     border-bottom: 0px;
   }

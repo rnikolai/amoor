@@ -1,7 +1,7 @@
 :root {
-   --main-page:#101010;
+   --main-page:#202020;
    --dark: #151515;
-
+   --text:#FFF;
    --accent_mid: #3C6E71;
    --accent_light: #4C8E91;
    --accent_dark: #335F61;
@@ -18,7 +18,7 @@
 body {
    background-color: var(--main-page);
    font-family: 'Lato', sans-serif;
-   color: (--white);
+   color: (var(--text));
 }
 img{
    max-width: 100%;
