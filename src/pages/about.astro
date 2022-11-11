@@ -1,7 +1,15 @@
 ---
 import Main from '../layout/main.astro'
+import hero from '/hero_page.jpg'
+
+import "../style/about.css"
 ---
 
 <Main>
-    <h1>about</h1>
+    <section class="hero" style = `background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(${hero})`>
+        <div class="hero-inner">
+            <h1 class="shadow-text">About Us
+            </h1>
+        </div>
+    </section>
 </Main>
