@@ -79,4 +79,10 @@ img{
    /* Border styles */
    border: 3px solid white; 
    border-radius: 20px;
+   transition: all 0.5s ease;
+ }
+
+ .hero .btn:hover{
+   background-color:var(--accent_mid);
+   transition: all 0.5s ease;
  }

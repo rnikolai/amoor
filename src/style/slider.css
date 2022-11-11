@@ -4,6 +4,7 @@
             position: relative;
             line-height: 0;
             float: left;
+            margin: 5px;
         }
          
         .image-slider img {

@@ -1,7 +1,32 @@
 ---
 import Main from '../layout/main.astro'
+import hero from '/hero_page.jpg'
+
+import "../style/contact.css"
 ---
 
 <Main>
-    <h1>contact US</h1>
+    <section class="hero" style = `background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(${hero})`>
+        <div class="hero-inner">
+            <h1 class="shadow-text">Get in touch
+            </h1>
+        </div>
+    </section>
+
+    <div class='contact'>
+        <div class ='contact title'>
+            <h2></h2>
+        </div>
+            <div class="contact form">
+                <div class="border"></div>
+                <form class="contact-form" action="index.html" method="post">
+                  <input type="text" class="contact-form-text" placeholder="Your name">
+                  <input type="email" class="contact-form-text" placeholder="Your email">
+                  <input type="text" class="contact-form-text" placeholder="Your phone">
+                  <textarea class="contact-form-text" placeholder="Your message"></textarea>
+                  <input type="submit" class="contact-form-btn" value="Send">
+                </form>
+            </div>
+        </div>
+    </div>
 </Main>
