@@ -2,8 +2,8 @@
 .image-slider {
             margin-left: 3rem;
             position: relative;
-            display: inline-block;
             line-height: 0;
+            float: left;
         }
          
         .image-slider img {

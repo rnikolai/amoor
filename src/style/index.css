@@ -81,8 +81,19 @@
   margin: 0 auto;
   margin-top: 50px;
   grid-template-columns: repeat(5,1fr);
+}
 
-
+.grid-2-col{
+  display: grid;
+  place-items: center;
+  align-items: center;
+  min-height: 10vh;
+  
+  max-width: 2000px;
+  margin: 0 auto;
+  margin-top: 50px;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 50px;
 }
 
 .section-text{
@@ -122,7 +133,7 @@
 
 
 .loaded-el{
-  transition: all 0.5s ease;
+  transition: all 1s ease-in-out;
   opacity: 1;
   filter:blur(0);
   transform: translateX(0);
