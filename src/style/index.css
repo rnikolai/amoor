@@ -1,106 +1,39 @@
-#wrapper {
+#bannercontainer {
+    clear: both;
+    overflow: hidden;
     position: relative;
-    width: 100%;
-    min-height: 55vw;
-    height: 100%;
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: 1fr 3fr 1fr;
+    z-index: 50;
 }
 
-.layer {
-    position: absolute;
-    width: 100vw;
-    min-height: 55vw;
-    height: 100%;
-    overflow: hidden;
-}
-
-.layer .content-wrap {
-    position: absolute;
-    width: 100vw;
-    min-height: 55vw;
-    height: 100%;
-}
-
-.layer .content-body {
-    color: #fff;
-    width: 25%;
-    position: absolute;
-    top: 20%;
+#bannercontainer .top-banner-area {
+    color: var(--white);
+    height: 100vh;
+    min-height: 500px;
+    padding: 150px 0;
+    background: url('/hero_page.jpg') no-repeat center center fixed;
+    background-size: cover;
     text-align: center;
-    transform: translateY(-50%);
-}
-
-.layer img {
-    position: absolute;
-    width: 60%;
-    top: 42%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.layer h1 {
-    font-size: 2em;
-}
-
-.bottom {
-    background: #222;
-    z-index: 1;
-}
-
-.bottom .content-body {
-    right: 5%;
-}
-
-.bottom h1 {
-    color: var(--accent);
-}
-
-.top {
-    background: #222;
-    color: #222;
-    z-index: 2;
-    width: 50vw;
-}
-
-.top .content-body {
-    left: 5%;
-    color: #222;
-}
-
-.handle {
-    position: absolute;
-    height: 100%;
-    display: block;
-    background-color: var(--accent);
-    width: 5px;
-    top: 0;
-    left: 50%;
-    z-index: 0;
-}
-
-.skewed .handle {
-    top: 50%;
-    transform: rotate(30deg) translateY(-50%);
-    height: 200%;
-    transform-origin: top;
-}
-
-.skewed .top {
-    transform: skew(-30deg);
-    margin-left: -1000px;
-    width: calc(50vw + 1000px);
-}
-
-.skewed .top .content-wrap {
-    transform: skew(30deg);
-    margin-left: 1000px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: none;
+    flex-wrap: nowrap;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
 }
 
 .parallax {
   /* The image used */
-  background-image: url("/IMG_3554.jpeg");
+  background-image: url("/Materials/1.jpg");
 
   /* Set a specific height */
   min-height: 500px;

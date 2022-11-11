@@ -14,10 +14,16 @@ nav{
   position: fixed;
   width: 100%;
   background: transparent;
+  transition: 0.5s ease;
+}
+nav:hover{
+  background-color: var(--dark);
+  transition: 0.5s ease;
 }
 .scrolled{
   background: var(--dark);
   transition: 0.5s ease;
+  
 }
 nav:after{
   content: '';
@@ -64,8 +70,10 @@ nav ul li a:hover{
 }
 nav ul ul li a:hover{
   box-shadow: none;
+  background-color: var(--dark);
 }
 nav ul ul{
+  background-color: var(--dark);
   z-index: 1000;
   position: absolute;
   top: 90px;

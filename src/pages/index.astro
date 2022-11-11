@@ -1,54 +1,42 @@
 ---
-import Main from '../layout/main.astro'
-import '../style/index.css'
+import Main from "../layout/main.astro";
+import "../style/index.css";
 
-import hero from "/hero_page.jpg"
-import house_done from '/IMG_3563.jpeg'
-import house_process from '/IMG_3554.jpeg'
-
+import hero from "/hero_page.jpg";
+import house_done from "/IMG_3563.jpeg";
+import house_process from "/IMG_3554.jpeg";
 ---
 
 <Main>
-	<section id="wrapper" class="skewed">
-		<div class="layer bottom">
-		  <div class="content-wrap">
-			<img src={house_done} alt="Before">
-		  </div>
-		</div>
-		<div class="layer top">
-		  <div class="content-wrap">
-			<img src={house_process} alt="After">
-		  </div>
-		</div>
-		<div class="handle"></div>
-	  </section>
-	  
-	<div class = 'parallax'></div>
+  <div id="bannercontainer">
+    <div class="top-banner-area anim-inview inview" style="background-image:url('/hero_page.jpg')" >
+      <div class="container-fluid">
+        <header class="entry-header">
+          <h5 class="top-title wow fadeInDownSm" style="visibility: visible; animation-name: fadeInDownSm;" > AMOORDOD Construction Company </h5>
 
-	<div style="min-height:100vw ;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa provident excepturi optio ea. Soluta velit cumque quae impedit vero consequuntur molestiae possimus assumenda aperiam! Ipsam amet nam quis suscipit quasi!</div>
+          <h1
+            class="entry-title main-title wow fadeIn"style="visibility: visible; animation-name: fadeIn;">
+            <span class="decor"
+              ><span class="letters">
+                Custom Home Building
+              </span>
+            </span>
+          </h1>
 
-	  <script is:inline>
-		document.addEventListener('DOMContentLoaded', function() {
-			let wrapper = document.getElementById('wrapper'); 
-			let topLayer = wrapper.querySelector('.top');
-			let handle = wrapper.querySelector('.handle');
-			let skew = 0;
-			let delta = 0;
-			
-			if(wrapper.className.indexOf('skewed') != -1){
-			skew = 1000;
-			}
-			
-			wrapper.addEventListener('mousemove', function(e){
-			delta = (e.clientX - window.innerWidth / 2) * 0.5;
-			
-			handle.style.left = e.clientX + delta + 'px';  
-			
-			topLayer.style.width = e.clientX + skew + delta + 'px'; 
-			
-			});                         
-									
-									
-			});
-	  </script>
+          <div class="banner-desc wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br> Consequatur suscipit quasi, ad officiis laborum, incidunt atque et nulla .
+            </p>
+            <a href="/contact " class="">Contact Us</a>
+          </div>
+        </header>
+      </div>
+    </div>
+  </div>
+
+  <h1 style="height:60vw">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.</h1>
+
+
+  <div class = 'parallax'></div>
+  <h1 style="height:60vw">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.</h1>
 </Main>
