@@ -1,60 +1,71 @@
 ---
 import Main from "../layout/main.astro";
+import Slider from "../comp/slider.astro"
 import "../style/index.css";
 
 import hero from "/hero_page.jpg";
+import material from "/cct.jpg"
 import house_done from "/IMG_3563.jpeg";
-import house_process from "/IMG_3554.jpeg";
+
 ---
 
 <Main>
-  <div id="bannercontainer">
-    <div class="top-banner-area shadow-text" style=`background-image:url(${hero});`>
-      <div>
-        <header>
-          <h5> AMOORDOD Construction Company </h5>
-
-          <h1><span>Custom Home Building</span></h1>
-
-          <div>
-            <p>
-              One brick at a time. Anywhere,anytime.
-            </p>
-            <a href="/contact " class="">Contact Us</a>
-          </div>
-        </header>
-      </div>
+  <section class="hero" style = `background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(${hero})`>
+    <div class="hero-inner">
+        <h1 class="shadow-text">Amoordod <br> construction company</h1>
+        <h2 class="shadow-text">One brick at the time, <br>anywhere anytime.</h2>
+        <a href="https://example.com/" class="btn">Go ahead...</a>
     </div>
-  </div>
+</section>
 
 
-  <div class='section hidden'>
-    <h1 class ='hidden'  style="padding-top:5px;margin-top: 10px;height:60vw ;color:white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.
-
-    </h1>
+  <div class=''>
+    <Slider />
 
   </div>
-  <div class = 'parallax' style="background-image: url('/Custom-Contractor-Toronto.jpg');"></div>
+  
+  <div class = 'parallax' style=`background-image: url(${material});`></div>
+    
+  <div>
+   <div class='section'>
 
-  <div class='section hidden'>
-    <h1  style="height:60vw ;color:white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit illo reiciendis optio dolorum temporibus id nobis molestias debitis animi soluta eveniet saepe alias sunt, commodi sequi hic labore natus harum.</h1>
+      <div class="section-image">
+        <img src={house_done} alt="">
+      </div>
+      <div class="section-text">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae in asperiores, magni unde odit beatae, distinctio eveniet quibusdam dolore, aliquam ex? Optio quasi doloremque sint distinctio et obcaecati, commodi aliquid.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quidem amet culpa. Maxime asperiores ratione suscipit, sunt eaque illo amet quisquam autem. Delectus, vero quia? Ab facilis et debitis ad.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, sint impedit quae reiciendis labore ullam modi consequatur fugit eos error id accusantium. Ad esse nesciunt, modi tenetur iste quo dolorem?
+      </div>
+
   </div>
 
+  <div class='section'>
+    <div class="section-text">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae in asperiores, magni unde odit beatae, distinctio eveniet quibusdam dolore, aliquam ex? Optio quasi doloremque sint distinctio et obcaecati, commodi aliquid.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quidem amet culpa. Maxime asperiores ratione suscipit, sunt eaque illo amet quisquam autem. Delectus, vero quia? Ab facilis et debitis ad.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, sint impedit quae reiciendis labore ullam modi consequatur fugit eos error id accusantium. Ad esse nesciunt, modi tenetur iste quo dolorem?
+    </div>
+    <div class="section-image">
+      <img src={house_done} alt="">
+    </div>
+    
+
+  </div>
+
+  <div class='section'>
+
+    <div class="section-image">
+      <img src={house_done} alt="">
+    </div>
+    <div class="section-text">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae in asperiores, magni unde odit beatae, distinctio eveniet quibusdam dolore, aliquam ex? Optio quasi doloremque sint distinctio et obcaecati, commodi aliquid.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quidem amet culpa. Maxime asperiores ratione suscipit, sunt eaque illo amet quisquam autem. Delectus, vero quia? Ab facilis et debitis ad.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, sint impedit quae reiciendis labore ullam modi consequatur fugit eos error id accusantium. Ad esse nesciunt, modi tenetur iste quo dolorem?
+    </div>
+
+ </div>
+  </div>
 
   <script defer is:inline>
     const observer = new IntersectionObserver((entries) =>{
@@ -64,7 +75,7 @@ import house_process from "/IMG_3554.jpeg";
         }
       })
     })
-    const hiddenEl =  document.querySelectorAll('.hidden')
+    const hiddenEl =  document.querySelectorAll('.animated')
     hiddenEl.forEach((el) =>{observer.observe(el)})
   </script>
 

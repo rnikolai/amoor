@@ -1,23 +1,56 @@
-#bannercontainer {
-    clear: both;
-    overflow: hidden;
-    position: relative;
-    z-index: 50;
+.hero {
+  /* Sizing */
+  width: 100vw;
+  height: 100vh;
+  
+  /* Flexbox stuff */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Text styles */
+  text-align: center;
+  color: white; /* ADD THIS LINE */
+  
+  /* Background styles */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url({hero});
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: inset 0px 50px 50px var(--dark);
 }
 
-#bannercontainer .top-banner-area {
-    color: var(--white);
-    height: 100vh;
-    min-height: 500px;
-    padding: 150px 0;
-    background-size: cover;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    box-shadow:inset 10px 70px 100px var(--dark);
+.hero h1 {
+  /* Text styles */
+  font-size: 5em;
+
+  display: block;
+  
+  /* Margins */
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.hero .btn {
+  /* Positioning and sizing */
+  display: block;
+  width: 200px;
+  
+  /* Padding and margins */
+  padding: 1em;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  /* Text styles */
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  
+  /* Border styles */
+  border: 3px solid white; 
+  border-radius: 20px;
 }
 
 .shadow-text{
@@ -42,14 +75,56 @@
   display: grid;
   place-items: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 10vh;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  grid-template-columns: repeat(5,1fr);
 
+
+}
+
+.section-text{
+  color: white;
+  grid-column:span 2;
+}
+.section-image{
+  grid-column:span 3;
+}
+@media only screen and (max-width: 800px) {
+  .section{
+    grid-template-columns: 1fr;
+  }
+  .section-text{
+    color: white;
+    grid-column:span 1;
+    order: 1;
+  }
+  .section-image{
+    grid-column:span 1;
+  }
 }
 .hidden{
   opacity: 0;
-  transition: all 2s ease;
+  transition: all 1s ease;
 }
+
+.app-left{
+  filter:blur(1px);
+  transform: translateX(-100%);
+}
+
+.app-right{
+  filter:blur(1px);
+  transform: translateX(100%);
+}
+
+
 .loaded-el{
+  transition: all 0.5s ease;
   opacity: 1;
+  filter:blur(0);
+  transform: translateX(0);
 }
 
