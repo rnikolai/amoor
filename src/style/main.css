@@ -15,17 +15,6 @@
    /* Pallete */
 }
 
-main {
-  margin: auto;
-  width: 500px;
-  overflow: auto;
-  padding: 3rem 2rem;
-}
-
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
 
 body {
    background-color: var(--main-page);
