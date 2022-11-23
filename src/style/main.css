@@ -14,13 +14,16 @@
 
    /* Pallete */
 }
-
-
 body {
    background-color: var(--main-page);
    font-family: 'Lato', sans-serif;
    color: (var(--text));
 }
+
+*::selection{
+  background-color: #3C6E71;
+}
+
 img{
    max-width: 100%;
    height: auto;
@@ -87,3 +90,15 @@ img{
    background-color:var(--accent_mid);
    transition: all 0.5s ease;
  }
+
+ .container{
+  margin: 0 auto;
+  max-width: 80%;
+ }
+/* main mobile rules */
+ @media screen and (min-width: 480px) {
+  .container{
+    margin: 5 auto;
+    max-width: 100%;
+   }
+}
