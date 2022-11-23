@@ -91,12 +91,11 @@
     border-radius: 100%;
   }
 @media only screen and (max-width: 968px) {
-  
   .contact-info-wrapper {
     position: relative;
     display: -ms-grid;
     display: grid;
-    max-width: 60%;
+    max-width: 90%;
     margin-right: auto;
     margin-bottom: -50px;
     margin-left: auto;
