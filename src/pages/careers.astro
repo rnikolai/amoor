@@ -1,0 +1,121 @@
+---
+import Main from '../layout/main.astro'
+import hero from '/hero_page.jpg'
+---
+
+<style>
+
+.box{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 0 auto;
+    margin-top: 5px;
+    max-width: 60%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hero {
+    height: 25vh;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+  }
+  .contact-section{
+    background-size: cover;
+    padding: 40px 0;
+  }
+  .contact-section h1{
+    text-align: center;
+    color: #ddd;
+  }
+  .border{
+    width: 100%;
+    text-align: center;
+    
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+  
+  .contact-form{
+    max-width: 600px;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+  }
+  .border h1{
+    color: #fff;
+  }
+  
+  .contact-form-text{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    background: #111;
+    padding: 20px 40px;
+    outline: none;
+    color: #ddd;
+    transition: 0.5s;
+  }
+  .contact-form-text:focus{
+    box-shadow: 0 0 10px 4px var(--accent_mid);
+  }
+  textarea.contact-form-text{
+    resize: none;
+    height: 120px;
+  }
+  .contact-form-btn{
+    display: block;
+    margin: 0 auto;
+    border: 0;
+    background: var(--accent_mid);
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .contact-form-btn:hover{
+    background: var(--accent_mid);
+  }
+  h1{
+    margin-top: 25px;
+
+  }
+  
+</style>
+
+<Main>
+    <section class="hero" style = `background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(${hero})`>
+        <div class="hero-inner">
+            <h1 class="shadow-text">Carrers</h1>
+        </div>
+    </section>
+
+    <div class='contact' style="min-height: 40vh;">
+            <div class="contact form">
+                <div class="border"><h1>Lets get in touch</h1></div>
+                <form class="contact-form" action="index.html" method="post">
+                  <input type="text" class="contact-form-text" placeholder="Your name">
+                  <input type="email" class="contact-form-text" placeholder="Your email">
+                  <input type="text" class="contact-form-text" placeholder="Your phone">
+                  <h1>Who are you applying as?</h1>
+                  <input type="radio" name = "type"  value = "Employee"><label for="html">Employee</label><br>
+                  <input type="radio" name = "type"  value = "Contractor"><label for="html">Contractor</label><br>
+                  <h1>Which possitions are you applying for?</h1>
+                  <input type="checkbox" name = "labour0" id="" value = "Employee"><label for="html">Masonry Labourer</label><br>
+                  <input type="checkbox" name = "labour1" id="Contractor" value = "Contractor"><label for="html">Masonry Forklift Operator</label><br>
+                  <input type="checkbox" name = "labour2" id="Contractor" value = "Contractor"><label for="html">Masonry Bricklayer</label><br>
+                  <textarea class="contact-form-text" placeholder="Any additional information"></textarea>
+                  <input type="submit" class="contact-form-btn" value="Send application">
+                </form>
+            </div>
+        </div>
+    </div>
+</Main>

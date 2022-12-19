@@ -2,20 +2,160 @@
 import Main from "../layout/main.astro";
 import Slider from "../comp/slider.astro";
 import FAQ from "../comp/faq.astro";
-import "../style/index.css";
 
-import hero from "/hero/wallpaperflare.com_wallpaper_3.jpg";
-import material from "/cct.jpg";
+import hero1 from "/hero/wallpaperflare.com_wallpaper_3.jpg";
+import hero from "/hero/alt_hero.jpeg";
+import material1 from "/cct.jpg";
+import material from "/scroll.jpg";
 import model1 from "/model1.jpg";
 import model2 from "/model2.jpeg";
 import model3 from "/model3.jpeg";
 ---
 
+
+<style>
+.shadow-text{
+  text-shadow: 2px 2px var(--dark);
+}
+
+.parallax {
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section{
+  display: grid;
+  place-items: center;
+  align-items: center;
+  min-height: 10vh;
+  gap: 1.5rem;
+  max-width: 60%;
+  margin: 0 auto;
+  margin-top: 50px;
+  grid-template-columns: repeat(5,1fr);
+}
+
+.grid-2-col{
+  display: grid;
+  place-items: center;
+  align-items: center;
+  min-height: 10vh;
+  
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 50px;
+}
+.tall{
+  min-height: 30vw;
+}
+
+.section-text{
+  color: var(--text);
+  grid-column:span 2;
+}
+.section-image{
+  grid-column:span 3;
+}
+
+/* mobile rules */
+@media only screen and (max-width: 800px) {
+  .section{
+    grid-template-columns: 1fr;
+  }
+  .grid-2-col{
+    grid-template-columns: 1fr;
+  }
+  .section-text{
+    color: var(--text);
+    grid-column:span 1;
+    order: 1;
+  }
+  .section-image{
+    grid-column:span 1;
+  }
+}
+
+/* animations */
+.hidden{
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.app-left{
+  filter:blur(1px);
+  transform: translateX(-25%);
+}
+
+.app-right{
+  filter:blur(1px);
+  transform: translateX(25%);
+}
+
+
+.loaded-el{
+  transition: all 1s ease-in-out;
+  opacity: 1;
+  filter:blur(0);
+  transform: translateX(0);
+}
+/* Style the tab */
+.tab {
+  margin: 0 auto;
+  margin-top: 25px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: space-around;
+  max-width: 80%;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  color: black;
+  border-top: none;
+  max-width: 80%;
+  margin: 0 auto;
+  background-color: white;
+
+}
+
+</style>
+
 <Main>
-  <div
-    class="hero"
-    style=`background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(${hero})`
-  >
+  <div class="hero" style=`background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(${hero})`>
     <div class="hero-inner">
       <h1 class="shadow-text">AMOORDOD <br /> Building Company</h1>
       <h2 class="shadow-text">
@@ -28,7 +168,7 @@ import model3 from "/model3.jpeg";
   <div class="grid-2-col tall">
     <Slider />
 
-    <div style="color:white;">
+    <div style=" margin-left:25px;color:white;">
       <h1>Making your vision come true, that is what we do.</h1>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda velit sed
       id nemo saepe itaque et quidem tenetur natus tempora. Itaque optio placeat
@@ -38,10 +178,40 @@ import model3 from "/model3.jpeg";
 
   <div class="parallax" style=`background-image: url(${material});`></div>
 
-  <div class="container"><h1>Our Projects</h1></div>
+  <div class="tab">
+    <button class="tablinks active" onclick="openCity(event, 'ongoing')">Ongoing Projects</button>
+    <button class="tablinks" onclick="openCity(event, 'luxury')">Luxury Houses</button>
+    <button class="tablinks" onclick="openCity(event, 'custom')">Custom Houses</button>
+  </div>
+  
+  <div id="ongoing" class="tabcontent" style='display:block'>
+    <h3>Ongoing Projects</h3>
+    <div class ="grid-2-col">
+      <p style=" margin-right:25px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae in asperiores, magni unde odit beatae, distinctio eveniet quibusdam dolore, aliquam ex? Optio quasi doloremque sint distinctio et obcaecati, commodi aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quidem amet culpa. Maxime asperiores ratione suscipit, sunt eaque illo amet quisquam autem. Delectus, vero quia? Ab facilis et debitis ad. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, sint impedit quae reiciendis labore ullam modi consequatur fugit eos error id accusantium. Ad esse nesciunt, modi tenetur iste quo dolorem?.</p>
+      <img src={model1} alt="">
+    </div>
+  </div>
+  
+  <div id="luxury" class="tabcontent">
+    <h3>Luxury Houses</h3>
+    <div class ="grid-2-col">
+      <img src={model2} alt="">
+      <p style=" margin-left:25px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae in asperiores, magni unde odit beatae, distinctio eveniet quibusdam dolore, aliquam ex? Optio quasi doloremque sint distinctio et obcaecati, commodi aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quidem amet culpa. Maxime asperiores ratione suscipit, sunt eaque illo amet quisquam autem. Delectus, vero quia? Ab facilis et debitis ad. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, sint impedit quae reiciendis labore ullam modi consequatur fugit eos error id accusantium. Ad esse nesciunt, modi tenetur iste quo dolorem?</p>
+    </div>
+  </div>
+  
+  <div id="custom" class="tabcontent">
+    <h3>Custom Houses</h3>
+    <div class ="grid-2-col">
+      <p style=" margin-right:25px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae in asperiores, magni unde odit beatae, distinctio eveniet quibusdam dolore, aliquam ex? Optio quasi doloremque sint distinctio et obcaecati, commodi aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quidem amet culpa. Maxime asperiores ratione suscipit, sunt eaque illo amet quisquam autem. Delectus, vero quia? Ab facilis et debitis ad. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, sint impedit quae reiciendis labore ullam modi consequatur fugit eos error id accusantium. Ad esse nesciunt, modi tenetur iste quo dolorem?</p>
+      <img src={model3} alt="">
+    </div>
+
+  </div>
+
+  <FAQ />
 
   <div>
-    <h1></h1>
     <div class="section animated app-right hidden">
       <div class="section-image">
         <img src={model1} alt="" />
@@ -100,7 +270,7 @@ import model3 from "/model3.jpeg";
     </div>
   </div>
 
-  <FAQ />
+  
 
   <script defer is:inline>
     const observer = new IntersectionObserver((entries) => {
@@ -115,4 +285,21 @@ import model3 from "/model3.jpeg";
       observer.observe(el);
     });
   </script>
+
+<script is:inline>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  </script>
+
 </Main>

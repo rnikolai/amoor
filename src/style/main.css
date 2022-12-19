@@ -10,9 +10,12 @@
    --white: #FFFFFF;
    --grey: #D9D9D9;
 
-
-
-   /* Pallete */
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  max-width: 100%
 }
 body {
    background-color: var(--main-page);
@@ -72,9 +75,8 @@ img{
  }
  
  .hero h1 {
-   /* Text styles */
-   font-size: 5em;
  
+   font-size:8vw;
    display: block;
    
    /* Margins */
@@ -119,4 +121,18 @@ img{
     margin: 5 auto;
     max-width: 100%;
    }
+   html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative;
+    width:100% !important;
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
+    display: none;
+  }
+  .hero h1 {
+    font-size:3em;
+  }
 }

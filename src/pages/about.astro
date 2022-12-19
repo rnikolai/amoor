@@ -2,9 +2,16 @@
 import Main from '../layout/main.astro'
 import hero from '/hero_page.jpg'
 
-import "../style/about.css"
 ---
 
+<style>
+    .hero {
+    height: 30vh;
+    background-position: bottom 5px right 7px;
+    background-repeat: no-repeat; 
+}
+
+</style>
 <Main>
     <section class="hero" style = `background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(${hero})`>
         <div class="hero-inner">
