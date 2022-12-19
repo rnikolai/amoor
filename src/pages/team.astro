@@ -2,8 +2,12 @@
 import Main from '../layout/main.astro'
 import def from '/team/default.jpeg'
 import hero from '/hero_page.jpg'
+import earth_texture from "/team/earth.jpg"
 
-import peopele from '../team.json'
+
+
+import team from "/team/team_temp.jpg"
+
 ---
 <style>
 
@@ -142,7 +146,7 @@ image{
 
   <div class="container">
     <div class="grid-2-col">
-      <img src="/team/team_temp.jpg" alt="team_temp.jpg">
+      <img src={team} alt="team_temp.jpg">
 
       <p style = "color:white ; margin-left:25px;">Our construction team is a group of highly skilled and dedicated professionals who are committed to delivering top-quality projects on time and within budget. They are known for their attention to detail and ability to adapt to changing conditions, ensuring that each project meets all required specifications and standards.
 
@@ -215,7 +219,7 @@ image{
 
 
 
-<script is:inline>
+<script is:inline define:vars={{ earth_texture}}>
     
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -229,7 +233,7 @@ image{
     // Create the Earth earth
     const earthGeometry = new THREE.SphereGeometry(1.5, 64, 64);
     const earthMaterial = new THREE.MeshBasicMaterial({
-      map: new THREE.TextureLoader().load("/team/earth.jpg")
+      map: new THREE.TextureLoader().load(earth_texture)
     });
     const earth = new THREE.Mesh(earthGeometry, earthMaterial);
     scene.add(earth);
