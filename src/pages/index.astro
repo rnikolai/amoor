@@ -128,7 +128,7 @@ import model3 from "/model3.jpeg";
   margin: 0 auto;
   max-width: 60%;
   box-shadow: 0px 5px 50px 5px rgba(94, 94, 94, 0.7);
-  margin-bottom: var(--margin-top-half);
+  margin-bottom:var(--margin-top-half);
 }
 
 /* Style the buttons inside the tab */
@@ -147,12 +147,13 @@ import model3 from "/model3.jpeg";
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+  background-color: var(--accent_light);
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #bbb;
+  background-color: var(--accent_mid);
+  box-shadow: inset 1px 1px 5px #101010 ;
 }
 /* Style the tab content */
 .tabcontent {
