@@ -95,6 +95,11 @@ import model3 from "/model3.jpeg";
   transform: translateX(-25%);
 }
 
+.app-bottom{
+  filter:blur(1px);
+  transform: translateY(25%);
+}
+
 .app-right{
   filter:blur(1px);
   transform: translateX(25%);
@@ -227,7 +232,7 @@ import model3 from "/model3.jpeg";
   </div>
 
   <div class="parallax" style=`background-image: url(${material});`></div>
-<div id="tab_container">
+<div id="tab_container" class="app-bottom animated  hidden">
   <div class="tab">
     <button class="tablinks active" onclick="openCity(event, 'ongoing')">Ongoing Projects</button>
     <button class="tablinks" onclick="openCity(event, 'luxury')">Luxury Houses</button>
