@@ -115,7 +115,7 @@ import model3 from "/model3.jpeg";
 /* Style the tab */
 .tab {
   margin: 0 auto;
-  margin-top: var(--margin-top-standart);
+  margin-top: var(--margin-top-half);
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
@@ -127,7 +127,8 @@ import model3 from "/model3.jpeg";
 #tab_container{
   margin: 0 auto;
   max-width: 60%;
-  box-shadow: 0px 5px 50px 5px rgba(94, 94, 94, 0.7); 
+  box-shadow: 0px 5px 50px 5px rgba(94, 94, 94, 0.7);
+  margin-bottom: var(--margin-top-half);
 }
 
 /* Style the buttons inside the tab */
@@ -195,7 +196,14 @@ import model3 from "/model3.jpeg";
   --color: #000000;
   --light-theme: #ffffff;
 }
-
+.title_header{
+  display: flex;
+  align-items: center;
+  color:white;
+  margin: 0 auto;
+  margin-top:  var(--margin-top-half);
+  max-width: 60%;
+}
 
 
 </style>
@@ -210,14 +218,7 @@ import model3 from "/model3.jpeg";
       <a href="contact" class="btn">Get in Touch</a>
   </div>
     </div>
-  </div>
-
-  <div id="History">
-    <p>
-
-</p>
-
-  </div>
+  
 
   <div>
 
@@ -243,7 +244,9 @@ import model3 from "/model3.jpeg";
     </div>
   </div>
 
-  <div class="parallax" style=`background-image: url(${material});`></div>
+<div class="parallax" style=`background-image: url(${material});`></div>
+
+<div class = "title_header"><div style="background-color: #FFF;" class = "divider"></div><h1 style="white-space: nowrap;">Projects</h1><div style="background-color: #FFF;" class = "divider"></div></div>
 <div id="tab_container" class="app-bottom animated hidden">
   <div class="tab">
     <button class="tablinks active" onclick="openCity(event, 'ongoing')">Ongoing Projects</button>
@@ -293,8 +296,8 @@ import model3 from "/model3.jpeg";
   </div>
 </div>
   
-
-  <FAQ />
+<div class = "title_header"><div style="background-color: #FFF;" class = "divider"></div><h1 style="white-space: nowrap;">Frequently asked questions</h1><div style="background-color: #FFF;" class = "divider"></div></div>
+<FAQ />
 
   <div>
     <div class="section animated app-right hidden">
