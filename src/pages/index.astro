@@ -3,10 +3,9 @@ import Main from "../layout/main.astro";
 import Slider from "../comp/slider.astro";
 import FAQ from "../comp/faq.astro";
 
-import hero1 from "/hero/wallpaperflare.com_wallpaper_3.jpg";
+
 import hero from "/hero/alt_hero.jpeg";
-import material1 from "/cct.jpg";
-import material from "/scroll.jpg";
+import material from "/304774.jpg";
 import model1 from "/model1.jpg";
 import model2 from "/model2.jpeg";
 import model3 from "/model3.jpeg";
@@ -48,6 +47,7 @@ import model3 from "/model3.jpeg";
   align-items: center;
   min-height: 10vh;
   
+  gap:20px 5px;
   max-width: 60%;
   margin: 0 auto;
   margin-top: var(--margin-top-standart);
@@ -126,7 +126,7 @@ import model3 from "/model3.jpeg";
 }
 #tab_container{
   margin: 0 auto;
-  max-width: 80%;
+  max-width: 60%;
   box-shadow: 0px 5px 50px 5px rgba(94, 94, 94, 0.7); 
 }
 
@@ -139,7 +139,7 @@ import model3 from "/model3.jpeg";
   cursor: pointer;
   margin: 0;
   white-space: nowrap;
-  padding:  16px 15%;
+  padding:  16px 13%;
   transition: 0.3s;
   font-size: 17px;
 }
@@ -151,7 +151,7 @@ import model3 from "/model3.jpeg";
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #ccc;
+  background-color: #bbb;
 }
 /* Style the tab content */
 .tabcontent {
@@ -160,7 +160,8 @@ import model3 from "/model3.jpeg";
   color: black;
   border-top: none;
   margin: 0 auto;
-  background-color: white;
+  background-color: rgb(50,50,50);
+  color: white; 
  
 }
 .divider{
@@ -185,6 +186,16 @@ import model3 from "/model3.jpeg";
     -ms-flex-align: center;
     align-items: center;
 }
+.grid-2-col_tab{
+  max-width: 90% !important;
+}
+
+:root {
+  --background-color: #000000;
+  --color: #000000;
+  --light-theme: #ffffff;
+}
+
 
 
 </style>
@@ -197,6 +208,7 @@ import model3 from "/model3.jpeg";
         Building luxury homes, <br />One dream at a time.
       </h2>
       <a href="contact" class="btn">Get in Touch</a>
+  </div>
     </div>
   </div>
 
@@ -232,7 +244,7 @@ import model3 from "/model3.jpeg";
   </div>
 
   <div class="parallax" style=`background-image: url(${material});`></div>
-<div id="tab_container" class="app-bottom animated  hidden">
+<div id="tab_container" class="app-bottom animated hidden">
   <div class="tab">
     <button class="tablinks active" onclick="openCity(event, 'ongoing')">Ongoing Projects</button>
     <button class="tablinks" onclick="openCity(event, 'luxury')">Luxury Houses</button>
@@ -241,10 +253,10 @@ import model3 from "/model3.jpeg";
   
   <div id="ongoing" class="tabcontent" style='display:block'>
     
-    <div class ="grid-2-col">
+    <div class ="grid-2-col grid-2-col_tab">
       <div>
         <div class="header_container">
-          <h1 style="white-space: nowrap;">Ongoing projects</h1><div style="background-color: #000;" class = "divider"></div>
+          <h1 style="white-space: nowrap;">Ongoing projects</h1><div style="background-color: #FFF;" class = "divider"></div>
         </div>
         <br>
         <p style=" margin-right:25px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae in asperiores, magni unde odit beatae, distinctio eveniet quibusdam dolore, aliquam ex? Optio quasi doloremque sint distinctio et obcaecati, commodi aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quidem amet culpa. Maxime asperiores ratione suscipit, sunt eaque illo amet quisquam autem. Delectus, vero quia? Ab facilis et debitis ad. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, sint impedit quae reiciendis labore ullam modi consequatur fugit eos error id accusantium. Ad esse nesciunt, modi tenetur iste quo dolorem?.</p>  
@@ -254,26 +266,26 @@ import model3 from "/model3.jpeg";
   </div>
   
   <div id="luxury" class="tabcontent">
-    <div class ="grid-2-col">
+    <div class ="grid-2-col grid-2-col_tab">
       <img src={model2} alt="">
       <div style=" margin-left:25px;">
         <div class="header_container">
-          <h1 style="white-space: nowrap;">Luxury Houses</h1><div style="background-color: #000;" class = "divider"></div>
+          <h1 style="white-space: nowrap;">Luxury Houses</h1><div style="background-color: #FFF;" class = "divider"></div>
         </div>
         <br>
-        <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae in asperiores, magni unde odit beatae, distinctio eveniet quibusdam dolore, aliquam ex? Optio quasi doloremque sint distinctio et obcaecati, commodi aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quidem amet culpa. Maxime asperiores ratione suscipit, sunt eaque illo amet quisquam autem. Delectus, vero quia? Ab facilis et debitis ad. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, sint impedit quae reiciendis labore ullam modi consequatur fugit eos error id accusantium. Ad esse nesciunt, modi tenetur iste quo dolorem?.</p>  
+        <p >If you are in the market for a luxury home, look no further than our building services. We specialize in creating stunning, high-end homes that combine elegance and comfort. Our team of skilled architects and craftsmen are dedicated to creating homes that are tailored to your specific needs and desires. We use only the finest materials and latest building techniques to ensure that your new home is not only beautiful, but also built to last. Contact us today to learn more and start building your dream home.</p>  
       </div>
     </div>
   </div>
   
   <div id="custom" class="tabcontent">
-    <div class ="grid-2-col">
+    <div class ="grid-2-col grid-2-col_tab">
       <div>
         <div class="header_container">
-          <h1 style="white-space: nowrap;">Custom Houses</h1><div style="background-color: #000;" class = "divider"></div>
+          <h1 style="white-space: nowrap;">Custom Houses</h1><div style="background-color: #FFF;" class = "divider"></div>
         </div>
         <br>
-        <p style=" margin-right:25px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae in asperiores, magni unde odit beatae, distinctio eveniet quibusdam dolore, aliquam ex? Optio quasi doloremque sint distinctio et obcaecati, commodi aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quidem amet culpa. Maxime asperiores ratione suscipit, sunt eaque illo amet quisquam autem. Delectus, vero quia? Ab facilis et debitis ad. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, sint impedit quae reiciendis labore ullam modi consequatur fugit eos error id accusantium. Ad esse nesciunt, modi tenetur iste quo dolorem?.</p>  
+        <p style=" margin-right:25px;">Welcome to our custom houses building page! At Amoordod, we specialize in designing and building one-of-a-kind homes that reflect the unique style and needs of our clients. </p>  
       </div>
       <img src={model3} alt="">
     </div>
