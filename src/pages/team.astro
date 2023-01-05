@@ -89,15 +89,20 @@ image{
   width: 100%;
   height: 100%;
   overflow : scroll;
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  color: white;
 }
-#text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    color: #ffffff;
-    text-align: center;
+#text{
+
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+
 }
 .grid-2-col{
   display: grid;
@@ -150,10 +155,8 @@ image{
   <div class="container">
     <div class="grid-2-col">
       <img src={team} alt="team_temp.jpg">
-
       <p style = "color:white ; margin-left:25px;">Our multicultural team in the workplace is made up of individuals from a diverse range of backgrounds, cultures, and experiences. This diversity allows us to bring unique perspectives and ideas to the table, helping to foster creativity and innovation in our work. Having a multicultural team also allows us to better understand and serve our clients and customers, many of whom come from different backgrounds themselves. By valuing and respecting the individual experiences and perspectives of each team member, we are able to create a positive and inclusive work environment where everyone feels welcome and respected.</p>
     </div>
-    
   </div>
 
 
