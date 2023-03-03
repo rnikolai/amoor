@@ -73,6 +73,7 @@ import rent from "/lease/DSC_1567-Enhanced.jpg"
 @media only screen and (max-width: 800px) {
   .section{
     grid-template-columns: 1fr;
+    max-width: 80%;
   }
   .section-text{
     color: var(--text);
@@ -146,6 +147,7 @@ import rent from "/lease/DSC_1567-Enhanced.jpg"
   background-color: #f1f1f1;
   display: flex;
   justify-content: space-around;
+
 }
 
 
@@ -167,7 +169,8 @@ import rent from "/lease/DSC_1567-Enhanced.jpg"
   cursor: pointer;
   margin: 0;
   white-space: nowrap;
-  padding:  16px 10%;
+  padding:  16px 200px;
+  flex: 1 1 auto;
   transition: 0.3s;
   font-size: 17px;
 }
