@@ -5,10 +5,14 @@ import FAQ from "../comp/faq.astro";
 
 
 import hero from "/hero/alt_hero.jpeg";
-import material from "/304774.jpg";
+import material from "/black_plank.jpg";
 import model1 from "/model1.jpg";
 import model2 from "/model2.jpeg";
 import model3 from "/model3.jpeg";
+
+import office from "/office.jpg";
+
+import rent from "/lease/DSC_1567-Enhanced.jpg"
 ---
 
 
@@ -54,9 +58,7 @@ import model3 from "/model3.jpeg";
   grid-template-columns: 1fr 1fr;
   margin-bottom: 50px;
 }
-.tall{
-  min-height: 30vw;
-}
+
 
 .section-text{
   color: var(--text);
@@ -71,9 +73,6 @@ import model3 from "/model3.jpeg";
   .section{
     grid-template-columns: 1fr;
   }
-  .grid-2-col{
-    grid-template-columns: 1fr;
-  }
   .section-text{
     color: var(--text);
     grid-column:span 1;
@@ -81,6 +80,18 @@ import model3 from "/model3.jpeg";
   }
   .section-image{
     grid-column:span 1;
+  }
+  #tab_container{
+  max-width: 60%;
+  }
+
+  .header_container{
+    color: var(--text);
+    grid-column:span 1;
+    order: 0;
+  }
+  .grid-2-col{
+    grid-template-columns: 1fr;
   }
 }
 
@@ -116,17 +127,19 @@ import model3 from "/model3.jpeg";
 .tab {
   margin: 0 auto;
   margin-top: var(--margin-top-half);
-  overflow: hidden;
+  flex-wrap: wrap;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
   display: flex;
   justify-content: space-around;
-  
-
 }
+
+
+
+
 #tab_container{
   margin: 0 auto;
-  max-width: 60%;
+  max-width: 80%;
   box-shadow: 0px 5px 50px 5px rgba(94, 94, 94, 0.7);
   margin-bottom:var(--margin-top-half);
 }
@@ -205,7 +218,24 @@ import model3 from "/model3.jpeg";
   margin-top:  var(--margin-top-half);
   max-width: 60%;
 }
-
+.link-btn{
+  text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    border: 0;
+    background: var(--accent_mid);
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    text-align: center;
+    padding-top: 15px;
+    margin-top: 15px;
+  }
+  .link-btn:hover{
+    background: var(--accent_mid);
+  }
 
 </style>
 
@@ -258,14 +288,16 @@ import model3 from "/model3.jpeg";
   <div id="ongoing" class="tabcontent" style='display:block'>
     
     <div class ="grid-2-col grid-2-col_tab">
+      <img src={model1} alt="">
       <div>
         <div class="header_container">
           <h1 style="white-space: nowrap;">Ongoing projects</h1><div style="background-color: #FFF;" class = "divider"></div>
         </div>
         <br>
         <p style=" margin-right:25px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae in asperiores, magni unde odit beatae, distinctio eveniet quibusdam dolore, aliquam ex? Optio quasi doloremque sint distinctio et obcaecati, commodi aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quidem amet culpa. Maxime asperiores ratione suscipit, sunt eaque illo amet quisquam autem. Delectus, vero quia? Ab facilis et debitis ad. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, sint impedit quae reiciendis labore ullam modi consequatur fugit eos error id accusantium. Ad esse nesciunt, modi tenetur iste quo dolorem?.</p>  
+        <a href="/amoor/ongoing" class="link-btn">Learn More</a>
       </div>
-     <img src={model1} alt="">
+
     </div>
   </div>
   
@@ -278,35 +310,38 @@ import model3 from "/model3.jpeg";
         </div>
         <br>
         <p >If you are in the market for a luxury home, look no further than our building services. We specialize in creating stunning, high-end homes that combine elegance and comfort. Our team of skilled architects and craftsmen are dedicated to creating homes that are tailored to your specific needs and desires. We use only the finest materials and latest building techniques to ensure that your new home is not only beautiful, but also built to last. Contact us today to learn more and start building your dream home.</p>  
+        <a href="/amoor/luxury" class="link-btn">Learn More</a>
       </div>
     </div>
   </div>
   
   <div id="custom" class="tabcontent">
     <div class ="grid-2-col grid-2-col_tab">
+      <img src={model3} alt="">
       <div>
         <div class="header_container">
           <h1 style="white-space: nowrap;">Custom Houses</h1><div style="background-color: #FFF;" class = "divider"></div>
         </div>
         <br>
         <p style=" margin-right:25px;">Welcome to our custom houses building page! At Amoordod, we specialize in designing and building one-of-a-kind homes that reflect the unique style and needs of our clients. </p>  
+        <a href="/amoor/custom" class="link-btn">Learn More</a>
       </div>
-      <img src={model3} alt="">
+
     </div>
 
   </div>
 </div>
   
-<div class = "title_header"><div style="background-color: #FFF;" class = "divider"></div><h1 style="white-space: nowrap;">Frequently Asked Questions</h1><div style="background-color: #FFF;" class = "divider"></div></div>
+<div class = "title_header"><div style="background-color: #FFF;" class = "divider"></div><h1 >Frequently Asked Questions</h1><div style="background-color: #FFF;" class = "divider"></div></div>
 <FAQ />
 
   <div>
     <div class="section animated app-right hidden">
       <div class="section-image">
-        <img src={model1} alt="" />
+        <img src={office} alt="" />
       </div>
       <div class="section-text">
-        <h1>Title</h1>
+        <h1>Our Office</h1>
         <div>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae
           in asperiores, magni unde odit beatae, distinctio eveniet quibusdam
@@ -318,13 +353,14 @@ import model3 from "/model3.jpeg";
           adipisicing elit. Est, sint impedit quae reiciendis labore ullam modi
           consequatur fugit eos error id accusantium. Ad esse nesciunt, modi
           tenetur iste quo dolorem?
+          <a href="/amoor/office" class="link-btn">Our Office</a>
         </div>
       </div>
     </div>
 
     <div class="section animated app-left hidden">
       <div class="section-text">
-        <h1>Title</h1>
+        <h1>Rent and Lease </h1>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae in
         asperiores, magni unde odit beatae, distinctio eveniet quibusdam dolore,
         aliquam ex? Optio quasi doloremque sint distinctio et obcaecati, commodi
@@ -334,10 +370,13 @@ import model3 from "/model3.jpeg";
         dolor sit, amet consectetur adipisicing elit. Est, sint impedit quae reiciendis
         labore ullam modi consequatur fugit eos error id accusantium. Ad esse nesciunt,
         modi tenetur iste quo dolorem?
+        <a href="/amoor/lease" class="link-btn">Rent and Lease</a>
       </div>
+
       <div class="section-image">
-        <img src={model2} alt="" />
+        <img src={rent} alt="" />
       </div>
+
     </div>
 
     <div class="section animated app-right hidden">
@@ -345,7 +384,7 @@ import model3 from "/model3.jpeg";
         <img src={model3} alt="" />
       </div>
       <div class="section-text">
-        <h1>Title</h1>
+        <h1>Contact Us</h1>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae in
         asperiores, magni unde odit beatae, distinctio eveniet quibusdam dolore,
         aliquam ex? Optio quasi doloremque sint distinctio et obcaecati, commodi
@@ -355,6 +394,7 @@ import model3 from "/model3.jpeg";
         dolor sit, amet consectetur adipisicing elit. Est, sint impedit quae reiciendis
         labore ullam modi consequatur fugit eos error id accusantium. Ad esse nesciunt,
         modi tenetur iste quo dolorem?
+        <a href="/amoor/lease" class="link-btn">Contact Us</a>
       </div>
     </div>
   </div>

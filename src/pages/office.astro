@@ -1,0 +1,118 @@
+---
+import Main from '../layout/main.astro'
+import hero from '/black_plank.jpg'
+
+import office from '/office.jpg'
+---
+
+<style>
+    .hero {
+    height: 30vh;
+    background-size: cover;
+    background-position: bottom 5px right 7px;
+    background-repeat: no-repeat; 
+    }
+    img{
+        width: 800px;
+        height: auto;
+        max-height: 500px;
+        max-width: 25vw;
+    }
+
+    .tall{
+        min-height: 30vw;
+    }
+
+    .section-image{
+        grid-column:span 1;
+    }
+
+        /* mobile rules */
+    @media only screen and (max-width: 800px) {
+    .section{
+        grid-template-columns: 1fr;
+    }
+    .grid-2-col{
+        grid-template-columns: 1fr;
+    }
+    .section-image{
+        grid-column:span 1;
+    }
+}
+.des_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 60%;
+    background-color: rgb(50,50,50);
+    color: white;
+    margin: 0 auto;
+    margin-top: 25px;
+    height: 300px;
+}
+.grid-2-col{
+  display: grid;
+  place-items: center;
+  align-items: center;
+  min-height: 10vh;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: var(--margin-top-standart);
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 50px;
+}
+
+.container{
+  max-width: 60%;
+}
+/* mobile rules */
+@media only screen and (max-width: 800px) {
+  .section{
+    grid-template-columns: 1fr;
+  }
+  .grid-2-col{
+    grid-template-columns: 1fr;
+  }
+  .section-text{
+    color: var(--text);
+    grid-column:span 1;
+    order: 1;
+  }
+  .section-image{
+    grid-column:span 1;
+  }
+}
+
+</style>
+<Main>
+    <section class="hero" style = `background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(${hero})`>
+        <div class="hero-inner">
+            <h1 class="shadow-text">Our Office
+            </h1>
+        </div>
+    </section>
+
+    <div class="des_text">
+        <div class="text_wrap">
+            Our office is the place where all the magic happens. Its the place where we meet our clients discuss their needs and process all our projects. 
+
+            We have a spacious and modern office space that is designed to promote productivity and creativity.
+            Our office is located in the largest home improvement Centre in Canada! Called "Improve", 
+            which makes your home building experience considerably better as you can easily incorporate designs and ideas from other showrooms around the mall.
+        </div>
+    </div>
+
+
+    <div class = "grid-2-col">
+        
+          <div class="section-image">
+            <img src={office} alt="" />
+          </div>
+          <div class="section-image">
+            <img src={office} alt="" />
+          </div>
+      </div>
+
+
+</Main>

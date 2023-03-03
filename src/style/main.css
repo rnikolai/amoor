@@ -120,6 +120,9 @@ img{
  }
 /* main mobile rules */
  @media screen and (min-width: 480px) {
+  *{
+    max-width: 100%;
+  }
   .container{
     margin: 5 auto;
     max-width: 100%;

@@ -1,16 +1,11 @@
 ---
 import Main from '../layout/main.astro'
-import hero from '/lease/black_plank.jpg'
+import hero from '/black_plank.jpg'
 
 
 import model1 from '/lease/IMG_2298.jpg'
 import model2 from '/lease/IMG_2298.jpg'
 
-import model3 from '/lease/DSC_1567-Enhanced.jpg'
-import model4 from '/lease/13..jpg'
-
-import model5 from '/lease/m5.jpg'
-import model6 from '/lease/IMG_2298.jpg'
 
 ---
 
@@ -41,9 +36,7 @@ import model6 from '/lease/IMG_2298.jpg'
         margin-bottom: 50px;
     }
 
-    .tall{
-        min-height: 30vw;
-    }
+
 
     .section-image{
         grid-column:span 1;
@@ -78,16 +71,14 @@ import model6 from '/lease/IMG_2298.jpg'
 <Main>
     <section class="hero" style = `background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(${hero})`>
         <div class="hero-inner">
-            <h1 class="shadow-text">Rent Services
+            <h1 class="shadow-text">Custom Houses
             </h1>
         </div>
     </section>
 
     <div class="des_text">
         <div class="text_wrap">
-            We offer a wide range of high-quality heavy machinery for lease or rent at competitive prices. Our equipment is well-maintained and regularly inspected to ensure maximum safety and reliability on the job. With our flexible leasing and rental options, you can get the equipment you need without breaking the bank. Contact us today to learn more and get started on your next project.
-    
-            We offer rent and lease of a broad variety of heavy duty equipment and machinery  that can help you build your dream home.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa dolorem quasi, illo reiciendis tempora, consectetur eligendi a rerum maiores nulla ducimus numquam cupiditate vitae voluptates quidem aut provident ad omnis?
         </div>
     </div>
 
@@ -100,18 +91,6 @@ import model6 from '/lease/IMG_2298.jpg'
           <div class="section-image">
             <img src={model2} alt="" />
           </div>
-          <div class="section-image">
-                <img src={model3} alt="" />
-          </div>
-          <div class="section-image">
-            <img src={model4} alt="" />
-          </div>
-          <div class="section-image">
-            <img src={model5} alt="" />
-          </div>
 
-          <div class="section-image">
-            <img src={model6} alt="" />
-          </div>
       </div>
 </Main>
