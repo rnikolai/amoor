@@ -25,7 +25,7 @@ import rent from "/lease/DSC_1567-Enhanced.jpg"
 
 .parallax {
   /* Set a specific height */
-  min-height: 500px;
+  min-height: 250px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -53,7 +53,7 @@ import rent from "/lease/DSC_1567-Enhanced.jpg"
   min-height: 10vh;
   
   gap:20px 5px;
-  max-width: 60%;
+  max-width: 80%;
   margin: 0 auto;
   margin-top: var(--margin-top-standart);
   grid-template-columns: 1fr 1fr;
@@ -93,6 +93,19 @@ import rent from "/lease/DSC_1567-Enhanced.jpg"
   }
   .grid-2-col{
     grid-template-columns: 1fr;
+    max-width: 80%;
+  }
+  .divider{
+    display: none;
+  }
+
+  .title_header{
+  display: flex;
+  align-items: center;
+  color:white;
+  margin: 0 auto;
+  margin-top:  var(--margin-top-half);
+  max-width: 80%;
   }
 }
 
@@ -154,7 +167,7 @@ import rent from "/lease/DSC_1567-Enhanced.jpg"
   cursor: pointer;
   margin: 0;
   white-space: nowrap;
-  padding:  16px 13%;
+  padding:  16px 10%;
   transition: 0.3s;
   font-size: 17px;
 }
@@ -290,12 +303,12 @@ import rent from "/lease/DSC_1567-Enhanced.jpg"
     
     <div class ="grid-2-col grid-2-col_tab">
       <img src={model1} alt="">
-      <div>
+      <div style=" margin-left:25px;">
         <div class="header_container">
           <h1 style="white-space: nowrap;">Ongoing projects</h1><div style="background-color: #FFF;" class = "divider"></div>
         </div>
         <br>
-        <p style=" margin-right:25px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae in asperiores, magni unde odit beatae, distinctio eveniet quibusdam dolore, aliquam ex? Optio quasi doloremque sint distinctio et obcaecati, commodi aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quidem amet culpa. Maxime asperiores ratione suscipit, sunt eaque illo amet quisquam autem. Delectus, vero quia? Ab facilis et debitis ad. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, sint impedit quae reiciendis labore ullam modi consequatur fugit eos error id accusantium. Ad esse nesciunt, modi tenetur iste quo dolorem?.</p>  
+        <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae in asperiores, magni unde odit beatae, distinctio eveniet quibusdam dolore, aliquam ex? Optio quasi doloremque sint distinctio et obcaecati, commodi aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quidem amet culpa. Maxime asperiores ratione suscipit, sunt eaque illo amet quisquam autem. Delectus, vero quia? Ab facilis et debitis ad. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, sint impedit quae reiciendis labore ullam modi consequatur fugit eos error id accusantium. Ad esse nesciunt, modi tenetur iste quo dolorem?.</p>  
         <a href="/amoor/ongoing" class="link-btn">Learn More</a>
       </div>
 
@@ -319,12 +332,12 @@ import rent from "/lease/DSC_1567-Enhanced.jpg"
   <div id="custom" class="tabcontent">
     <div class ="grid-2-col grid-2-col_tab">
       <img src={model3} alt="">
-      <div>
+      <div style=" margin-left:25px;">
         <div class="header_container">
           <h1 style="white-space: nowrap;">Custom Houses</h1><div style="background-color: #FFF;" class = "divider"></div>
         </div>
         <br>
-        <p style=" margin-right:25px;">Welcome to our custom houses building page! At Amoordod, we specialize in designing and building one-of-a-kind homes that reflect the unique style and needs of our clients. </p>  
+        <p>Welcome to our custom houses building page! At Amoordod, we specialize in designing and building one-of-a-kind homes that reflect the unique style and needs of our clients. </p>  
         <a href="/amoor/custom" class="link-btn">Learn More</a>
       </div>
 
@@ -333,7 +346,7 @@ import rent from "/lease/DSC_1567-Enhanced.jpg"
   </div>
 </div>
   
-<div class = "title_header"><div style="background-color: #FFF;" class = "divider"></div><h1 >Frequently Asked Questions</h1><div style="background-color: #FFF;" class = "divider"></div></div>
+<div class = "title_header"><div style="background-color: #FFF;" class = "divider"></div><h1 style=" flex-shrink: 0" >Frequently Asked Questions</h1><div style="background-color: #FFF;" class = "divider"></div></div>
 <FAQ />
 
   <div>
